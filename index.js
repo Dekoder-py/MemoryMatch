@@ -43,6 +43,7 @@ cards.forEach(card => {
                 secondClick = null;
                 firstCard = null;
                 secondCard = null;
+                lockBoard = false;
             } else
                 resetCards();
         };
