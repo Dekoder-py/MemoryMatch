@@ -22,6 +22,21 @@ function resetCards() {
 
 };
 
+function checkWin() {
+    var win = true;
+    cards.forEach(card => {
+        if (card.textContent == '?') {
+            win = false;
+        }
+    });
+    if (win) {
+        const winText = document.createElement('h2');
+        winText.textContent = "You win!";
+
+        document.body.appendChild(winText);
+    }
+};
+
 cards.forEach(card => {
     card.addEventListener('click', () => {
         if (card.textContent !== '?' || lockBoard) return;
@@ -37,7 +52,7 @@ cards.forEach(card => {
             secondClick = value
             lockBoard = true;
             if (firstClick == secondClick) {
-                console.log("+1 score");
+                checkWin();
                 clicked = 0;
                 firstClick = null;
                 secondClick = null;
