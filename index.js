@@ -31,12 +31,19 @@ function checkWin() {
         const winText = document.createElement('h2');
         winText.textContent = "You win!";
 
+        const playAgainBtn = document.createElement('button');
+        playAgainBtn.className = 'reload';
+        playAgainBtn.textContent = 'Play Again!';
+        playAgainBtn.addEventListener('click', () => location.reload());
+
+
         document.body.appendChild(winText);
+        document.body.appendChild(playAgainBtn);
     }
 };
 
 const values = [];
-const numOfPairs = 6;
+const numOfPairs = 2;
 
 
 for (i = 1; i <= numOfPairs; i++) {
