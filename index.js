@@ -43,7 +43,7 @@ function checkWin() {
 };
 
 const values = [];
-const numOfPairs = 2;
+const numOfPairs = 6;
 
 
 for (i = 1; i <= numOfPairs; i++) {
